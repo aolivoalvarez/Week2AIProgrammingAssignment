@@ -15,11 +15,27 @@ void Function1(int a, int b) {
 
 void Function2(string s) {
     string newS = " ";
+
     for (int i = 0; i < s.size(); i++) {
         newS = s[i] + newS;
     }
 
     cout << newS << endl;
+}
+
+void Function3(string s) {
+    string wackyS = " ";
+
+    for (int j = 0; j < s.size(); j++) {
+
+        char v = s[j];
+
+        if ((v != 'a') && (v != 'e') && (v != 'i') && (v != 'o') && (v != 'u')) {
+            wackyS += s[j];
+        }
+    }
+
+    cout << wackyS << endl;
 }
 
 int main()
@@ -28,7 +44,7 @@ int main()
     int num2 = 0;
     string sentence = " ";
 
-    
+
 
     cout << "Please enter a sentence: ";
     getline(cin, sentence);
@@ -46,6 +62,10 @@ int main()
     cout << endl;
 
     Function2(sentence);
+
+    cout << endl;
+
+    Function3(sentence);
+
+    return 0;
 }
-
-
